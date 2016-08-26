@@ -40,20 +40,20 @@ public class InstrumentString implements Serializable, Cloneable {
     }
 
     /**
-     * @return The fret used.
-     */
-    public int getFret() {
-        return fret;
-    }
-
-    /**
      * Set the fingering
-     * 
+     *
      * @param newFingering
      *            the desired fingering.
      */
     public void setFinger(Finger finger) {
         this.finger = finger;
+    }
+
+    /**
+     * @return The fret used.
+     */
+    public int getFret() {
+        return fret;
     }
 
     /**

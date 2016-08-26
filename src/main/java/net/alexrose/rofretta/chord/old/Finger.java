@@ -30,8 +30,17 @@ public enum Finger {
             fingerById.put(finger.id, finger);
         }
     }
+
+    private final int id;
     
-    
+    /**
+     * Custom constructor so we can specify an id.
+     * @param value
+     */
+    Finger(int value) {
+        this.id = value;
+    }
+
     /**
      * Attempt to look up a Finger by its id instead of its value - for instance
      * -1 instead of "UNKNOWN"
@@ -40,23 +49,12 @@ public enum Finger {
      */
     public static Finger valueOfId(int id) {
         Finger retval = fingerById.get(id);
-        
+
         //if we can't find the specified index
         if(retval == null)
             return UNKNOWN;
         else
             return retval;
-    } 
-    
-    private final int id;
-
-    
-    /**
-     * Custom constructor so we can specify an id.
-     * @param value
-     */
-    Finger(int value) {
-        this.id = value;
     }
     
     /**

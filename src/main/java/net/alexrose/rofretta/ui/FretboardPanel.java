@@ -1,12 +1,12 @@
 package net.alexrose.rofretta.ui;
 
 
-
-import java.awt.*;
 import net.alexrose.rofretta.chord.old.Finger;
 import net.alexrose.rofretta.chord.old.InstrumentString;
 import net.alexrose.rofretta.chord.old.NoteName;
 import net.alexrose.rofretta.chord.old.Voicing;
+
+import java.awt.*;
 
 /**
  * 
@@ -15,10 +15,10 @@ import net.alexrose.rofretta.chord.old.Voicing;
  */
 public class FretboardPanel extends javax.swing.JPanel {
 
-    private Voicing voicing;
-    private boolean ignoreFingers = false ;
     final int YSIZE = 19;
     final int XSIZE = 15;
+    private Voicing voicing;
+    private boolean ignoreFingers = false;
 
     public FretboardPanel() {
         initComponents();

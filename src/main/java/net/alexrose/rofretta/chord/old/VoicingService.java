@@ -1,8 +1,5 @@
 package net.alexrose.rofretta.chord.old;
 
-import net.alexrose.rofretta.chord.old.Voicing;
-import net.alexrose.rofretta.chord.old.VoicingSearchCriteria;
-
 /**
  *
  * @author  Alex

@@ -19,17 +19,17 @@ public enum VoicingType {
             typeByPrettyName.put(type.getPrettyName(), type);
     }
     
-    public static VoicingType valueOfPrettyName(String prettyName) {
-        return typeByPrettyName.get(prettyName);
-    }
-    
     private final boolean movable;
     private final String prettyName;
-    
     VoicingType(String name, boolean isMovable) {
        this.prettyName = name;
        movable = isMovable;
     }
+
+    public static VoicingType valueOfPrettyName(String prettyName) {
+        return typeByPrettyName.get(prettyName);
+    }
+
     public boolean isMovable(){return movable;}
     public String getPrettyName() {return prettyName;}
     

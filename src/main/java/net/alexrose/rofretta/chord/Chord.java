@@ -1,21 +1,12 @@
-package net.alexrose.rofretta.chord.old;
+package net.alexrose.rofretta.chord;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
- * ChordType
- * This enumeration attempts to list the standard chord types out there. 
- * 
- * Ideas: eventually add a lists of intervals ie- Major {1,3,5}
- * 
- * Note: using a pretty name like we do here is not very localization friendly -
- * this probably should come from a property file.
- *  
- * @author  Alex
- * @version
+ * Created by alex on 7/30/16.
  */
-public enum ChordType {
+public enum Chord {
     MAJOR ("Major", "maj"),
     SUSPENDED ("Suspended", "sus"),
     MAJOR_FLAT_FIVE("Major Flat Five","maj-5" ),
@@ -49,44 +40,47 @@ public enum ChordType {
     THIRTEENTH_FLAT_NINE ("Thirteenth Flat Nine", "13-9"),
     THIRTEENTH_FLAT_FIVE_FLAT_NINE ("Thirteenth Flat Five Flat Nine", "13-5-9"),
     MINOR_THIRTEENTH ("Minor Thirteenth", "min13");
-    
-    private static final Map<String, ChordType> typeByPrettyName = new HashMap();
+
+    private static final Map<String, Chord> typeByPrettyName = new HashMap();
+    private static final Map<String, Chord> typeByAbbreviation = new HashMap();
+
     static {
-        for(ChordType type: ChordType.values())
+        for(Chord type: Chord.values())
             typeByPrettyName.put(type.getPrettyName(), type);
     }
 
-    private static final Map<String, ChordType> typeByAbbreviation = new HashMap();
     static {
-        for(ChordType type: ChordType.values())
+        for(Chord type: Chord.values())
             typeByAbbreviation.put(type.getAbbreviation(), type);
     }
-    /**
-     * Look up the enum based on pretty name ("Major") instead of regular value
-     * ("MAJOR").
-     * 
-     * @param prettyName The pretty name of the chord type.
-     * @return A chord type if one is found for the given pretty name else null.
-     */
-    public static ChordType valueOfPrettyName(String prettyName){
-        return typeByPrettyName.get(prettyName);
-    }
 
-    public static ChordType valueOfAbbreviation(String abbreviation) {
-        return typeByAbbreviation.get(abbreviation);
-    }
-    
     private String prettyName, abbreviation;
-    
+    private Interval[] intervals;
+
     /**
      * Constuctor for chord types so we can specify pretty name.
      * @param prettyName The print pretty name of the enumeration.
      */
-    ChordType(String prettyName, String abbreviation) {
+    Chord(String prettyName, String abbreviation,) {
         this.prettyName = prettyName;
         this.abbreviation = abbreviation;
     }
-    
+
+    /**
+     * Look up the enum based on pretty name ("Major") instead of regular value
+     * ("MAJOR").
+     *
+     * @param prettyName The pretty name of the chord type.
+     * @return A chord type if one is found for the given pretty name else null.
+     */
+    public static Chord valueOfPrettyName(String prettyName){
+        return typeByPrettyName.get(prettyName);
+    }
+
+    public static Chord valueOfAbbreviation(String abbreviation) {
+        return typeByAbbreviation.get(abbreviation);
+    }
+
     /**
      * Get the pretty name. 
      * @return A pretty name for the chord type
@@ -99,3 +93,4 @@ public enum ChordType {
         return abbreviation;
     }
 }
+

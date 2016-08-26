@@ -46,20 +46,20 @@ public enum NoteName {
         }
     }
     
-    public static NoteName valueOfPrettyName(String name) {
-        return notesByName.get(name);
-    }
-    
-    public static NoteName valueOfOffset(int relativeValue) {
-        return notesByOffset.get(relativeValue);
-    }
-    
     private int offset = 0;
     private String prettyName;
     
     NoteName(int note, String name) {
         this.offset = note;
         this.prettyName = name;
+    }
+
+    public static NoteName valueOfPrettyName(String name) {
+        return notesByName.get(name);
+    }
+
+    public static NoteName valueOfOffset(int relativeValue) {
+        return notesByOffset.get(relativeValue);
     }
 
     public String getPrettyName() {

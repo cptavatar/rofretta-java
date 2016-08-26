@@ -87,6 +87,11 @@ public class Voicing implements Serializable, Cloneable {
         return strings;
     }
 
+    public void setFingerings(InstrumentString[] newStrings) {
+        if (newStrings.length != tuning.getStringTunings().length)
+            throw new ParameterException("You must have one fingering per instrument string.");
+        strings = newStrings;
+    }
 
     public void setFingering(InstrumentString string, int index)
             throws ParameterException {
@@ -96,12 +101,6 @@ public class Voicing implements Serializable, Cloneable {
             throw new ParameterException(
                     "Index out of bounds for given number of strings.");
         }
-    }
-
-    public void setFingerings(InstrumentString[] newStrings) {
-        if(newStrings.length != tuning.getStringTunings().length)
-            throw new ParameterException("You must have one fingering per instrument string.");
-        strings = newStrings;
     }
 
     public int getFret(int whichString) {

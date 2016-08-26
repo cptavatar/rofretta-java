@@ -1,12 +1,14 @@
-package net.alexrose.rofretta.chord;
+package net.alexrose.rofretta.chord.old;
 
-import net.alexrose.rofretta.chord.old.IntervalException;
+
 
 /**
- * Created by alex on 7/30/16.
+ *
+ * @author  Alex
+ * @version
  */
 public enum Interval {
-    PERFECT_UNISON("Unison", 0, "1")
+    PERFECT_UNISON("Unison", 0, "0")
     ,MINOR_SECOND("Minor Second", 1, "\u266D2")
     ,MAJOR_SECOND("Major second", 2, "2")
     ,MINOR_THIRD("Minor Third", 3, "\u266D3")
@@ -29,22 +31,18 @@ public enum Interval {
     ,MINOR_THIRTEENTH("Minor Thirteenth", 20, "\u266D13")
     ,MAJOR_THIRTHEENTH("Major Thirteenth", 21, "13")
     ;
-
+            
     private final String prettyName;
     private final byte offset;
     private final String shortName;
-
-
-
+    
+            
+            
     Interval(String prettyName, int offset, String shortName){
         this.prettyName = prettyName;
         this.offset = (byte) offset;
         this.shortName = shortName;
     }
-    public String prettyName() {return prettyName;}
-    public String shortName() {return shortName;}
-    public byte offset() {return offset;}
-
 
     public static Interval intervalByInt(int size ) {
         Interval[] intervals = Interval.values();
@@ -52,5 +50,17 @@ public enum Interval {
             return intervals[size];
 
         throw new IntervalException();
+    }
+
+    public String prettyName() {
+        return prettyName;
+    }
+
+    public String shortName() {
+        return shortName;
+    }
+
+    public byte offset() {
+        return offset;
     }
 }

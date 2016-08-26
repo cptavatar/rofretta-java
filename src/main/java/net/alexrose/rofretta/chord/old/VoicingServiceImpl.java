@@ -1,9 +1,5 @@
 package net.alexrose.rofretta.chord.old;
 
-import java.util.ArrayList;
-import java.util.Collections;
-
-
 /**
  *
  * @author  Alex

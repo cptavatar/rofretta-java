@@ -5,16 +5,7 @@
 
 package net.alexrose.rofretta.audio;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.sound.midi.Instrument;
-import javax.sound.midi.InvalidMidiDataException;
-import javax.sound.midi.MidiChannel;
-import javax.sound.midi.MidiSystem;
-import javax.sound.midi.MidiUnavailableException;
-import javax.sound.midi.Receiver;
-import javax.sound.midi.ShortMessage;
-import javax.sound.midi.Synthesizer;
+import javax.sound.midi.*;
 
 /**
  *
