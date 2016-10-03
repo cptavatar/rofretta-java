@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package net.alexrose.rofretta.chord.old;
+package net.alexrose.rofretta.chord;
 
 import java.util.HashMap;
 import java.util.Map;

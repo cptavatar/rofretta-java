@@ -1,12 +1,15 @@
 package net.alexrose.rofretta.chord;
 
+
 import net.alexrose.rofretta.chord.old.IntervalException;
 
 /**
- * Created by alex on 7/30/16.
+ *
+ * @author Alex
+ * @version
  */
 public enum Interval {
-    PERFECT_UNISON("Unison", 0, "1")
+    PERFECT_UNISON("Unison", 0, "0")
     ,MINOR_SECOND("Minor Second", 1, "\u266D2")
     ,MAJOR_SECOND("Major second", 2, "2")
     ,MINOR_THIRD("Minor Third", 3, "\u266D3")
@@ -33,7 +36,6 @@ public enum Interval {
     private final String prettyName;
     private final byte offset;
     private final String shortName;
-
 
 
     Interval(String prettyName, int offset, String shortName){

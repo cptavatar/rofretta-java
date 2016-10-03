@@ -5,7 +5,7 @@ package net.alexrose.rofretta.chord.old;
  * @author  Alex
  * @version
  */
-public abstract class VoicingServiceImpl implements VoicingService {
+public abstract class VoicingServiceImpl {
    /*private VoicingDao dao;
     
  

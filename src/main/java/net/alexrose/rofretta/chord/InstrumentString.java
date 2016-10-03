@@ -1,4 +1,4 @@
-package net.alexrose.rofretta.chord.old;
+package net.alexrose.rofretta.chord;
 
 import java.io.Serializable;
 
@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @author  Alex
  * @version
  */
-public class InstrumentString implements Serializable, Cloneable {
+public class InstrumentString implements Serializable {
 
     private static final int DISABLED = -1;
     private int fret;
@@ -40,31 +40,12 @@ public class InstrumentString implements Serializable, Cloneable {
     }
 
     /**
-     * Set the fingering
-     *
-     * @param newFingering
-     *            the desired fingering.
-     */
-    public void setFinger(Finger finger) {
-        this.finger = finger;
-    }
-
-    /**
      * @return The fret used.
      */
     public int getFret() {
         return fret;
     }
 
-    /**
-     * Set the fret used.
-     * 
-     * @param newFret
-     *            The desired fret.
-     */
-    public void setFret(int fret) {
-        this.fret = fret;
-    }
 
     public boolean equals(Object candidate) {
         if (candidate.getClass() != this.getClass()) {
@@ -77,8 +58,5 @@ public class InstrumentString implements Serializable, Cloneable {
         return (fret == b.getFret()) && finger.equals(b.getFinger());
     }
 
-    @Override
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
+
 }

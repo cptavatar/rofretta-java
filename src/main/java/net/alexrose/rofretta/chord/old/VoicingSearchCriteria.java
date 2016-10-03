@@ -1,5 +1,7 @@
 package net.alexrose.rofretta.chord.old;
 
+import net.alexrose.rofretta.chord.*;
+
 import java.io.Serializable;
 
 /**

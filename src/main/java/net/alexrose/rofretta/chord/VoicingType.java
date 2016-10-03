@@ -1,4 +1,4 @@
-package net.alexrose.rofretta.chord.old;
+package net.alexrose.rofretta.chord;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,6 +14,7 @@ public enum VoicingType {
     MOVABLE_SHAPE("Shape", true);
     
     public static final Map<String, VoicingType> typeByPrettyName = new HashMap();
+
     static {
         for(VoicingType type : VoicingType.values()) 
             typeByPrettyName.put(type.getPrettyName(), type);
@@ -21,6 +22,8 @@ public enum VoicingType {
     
     private final boolean movable;
     private final String prettyName;
+
+
     VoicingType(String name, boolean isMovable) {
        this.prettyName = name;
        movable = isMovable;
