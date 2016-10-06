@@ -8,9 +8,6 @@ import java.util.Map;
  * 
  * This enumeration is used for note names for the 12 
  * basic notes
- * 
- * @author Alex Rose
- * @version 
  */
 public enum NoteName {
 
@@ -45,9 +42,9 @@ public enum NoteName {
             }
         }
     }
-    
-    private int offset = 0;
-    private String prettyName;
+
+    private final int offset;
+    private final String prettyName;
     
     NoteName(int note, String name) {
         this.offset = note;

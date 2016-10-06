@@ -1,0 +1,4 @@
+# test file for parsing chord definitions
+#
+
+032010 x32x1x C maj

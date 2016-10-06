@@ -4,8 +4,10 @@ import net.alexrose.rofretta.chord.*;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Some tests to verify that we can build parse a voicing out of a string for a given tuning
@@ -15,8 +17,10 @@ public class VoicingParserTest {
 
     @Test
     public void parse() throws Exception {
-        VoicingParser parser = new VoicingParser();
-        Voicing voicing = parser.parse("032010 x32x1x c maj", Instrument.GUITAR_STANDARD);
+        Optional<Voicing> opt = VoicingParser.parse("032010 x32x1x c maj", Instrument.GUITAR_STANDARD);
+
+        assertTrue(opt.isPresent());
+        Voicing voicing = opt.get();
 
         assertEquals(ChordType.MAJOR, voicing.getChordType());
         assertEquals(NoteName.C, voicing.getRoot());

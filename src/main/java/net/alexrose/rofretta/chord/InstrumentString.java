@@ -6,15 +6,13 @@ import java.io.Serializable;
  * InstrumentString represents the state of a string on an instrument: is the string 
  * being plucked or is it disabled, what fret (if any) is being depressed, what
  * finger (if any) is being used to depress tht 
- * 
- * @author  Alex
- * @version
+ *
  */
 public class InstrumentString implements Serializable {
 
     private static final int DISABLED = -1;
-    private int fret;
-    private Finger finger;
+    private final int fret;
+    private final Finger finger;
    
 
     public InstrumentString() {

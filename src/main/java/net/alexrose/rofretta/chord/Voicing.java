@@ -7,17 +7,16 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- *
- * @author  Alex
- * @version
+ * A voicing is the core of what we know about a chord played on a fretted instrument
+ * - what root, what frets are depressed, which fingers are used, etc.
  */
 public class Voicing {
 
-    private NoteName root;
-    private ChordType chord;
-    private VoicingType type;
-    private List<InstrumentString> strings;
-    private Instrument tuning;
+    private final NoteName root;
+    private final ChordType chord;
+    private final VoicingType type;
+    private final List<InstrumentString> strings;
+    private final Instrument tuning;
 
     /**
      * This constructor just gives you an
@@ -32,11 +31,12 @@ public class Voicing {
         this.type = VoicingType.OPEN;
 
         int numStrings = tuning.getNumStrings();
-        strings = new ArrayList<>(numStrings);
+
+        List<InstrumentString> tmpStrings = new ArrayList<>(numStrings);
         for (int i = 0; i < numStrings; i++) {
-            strings.add(new InstrumentString());
+            tmpStrings.add(new InstrumentString());
         }
-        strings = Collections.unmodifiableList(strings);
+        strings = Collections.unmodifiableList(tmpStrings);
     }
 
     /**

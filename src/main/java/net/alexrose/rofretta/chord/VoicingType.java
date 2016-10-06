@@ -4,9 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
- * @author  Alex
- * @version
+ * Enumeration covering what "type" of voicing we have, so we know how to deal with
+ * issues like transposition and drawing.
  */
 public enum VoicingType {
     OPEN ("Open", false),

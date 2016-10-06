@@ -4,9 +4,7 @@ package net.alexrose.rofretta.chord;
 import net.alexrose.rofretta.chord.old.IntervalException;
 
 /**
- *
- * @author Alex
- * @version
+ * Enumeration covering known interval types.
  */
 public enum Interval {
     PERFECT_UNISON("Unison", 0, "0")

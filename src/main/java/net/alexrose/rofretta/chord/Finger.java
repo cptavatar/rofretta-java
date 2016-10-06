@@ -10,10 +10,7 @@ import java.util.Map;
 
 /**
  * Finger is an enumeration for the various fingers on the human hand that
- * can be specified for fingering any giving chord voicing. 
- * 
- * @author  Alex
- * @version
+ * can be specified for fingering any giving chord voicing.
  */
 public enum Finger {
 
