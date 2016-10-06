@@ -1,7 +1,7 @@
 package net.alexrose.rofretta.parsing;
 
-import net.alexrose.rofretta.chord.Instrument;
-import net.alexrose.rofretta.chord.Voicing;
+import net.alexrose.rofretta.core.Instrument;
+import net.alexrose.rofretta.core.Voicing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

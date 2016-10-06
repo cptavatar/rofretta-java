@@ -1,6 +1,6 @@
 package net.alexrose.rofretta.parsing;
 
-import net.alexrose.rofretta.chord.*;
+import net.alexrose.rofretta.core.*;
 import org.junit.Test;
 
 import java.util.List;

@@ -1,7 +1,5 @@
-package net.alexrose.rofretta.chord;
+package net.alexrose.rofretta.core;
 
-
-import net.alexrose.rofretta.chord.old.IntervalException;
 
 /**
  * Enumeration covering known interval types.

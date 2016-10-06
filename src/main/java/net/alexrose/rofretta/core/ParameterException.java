@@ -1,4 +1,4 @@
-package net.alexrose.rofretta.chord.old;
+package net.alexrose.rofretta.core;
 
 /**
  *

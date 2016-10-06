@@ -1,11 +1,11 @@
-package net.alexrose.rofretta.chord;
+package net.alexrose.rofretta.core;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * ChordType
- * This enumeration attempts to list the standard chord types out there. 
+ * This enumeration attempts to list the standard core types out there.
  * 
  * Ideas: eventually add a lists of intervals ie- Major {1,3,5}
  * 
@@ -66,7 +66,7 @@ public enum ChordType {
     private String prettyName, abbreviation;
 
     /**
-     * Constuctor for chord types so we can specify pretty name.
+     * Constuctor for core types so we can specify pretty name.
      * @param prettyName The print pretty name of the enumeration.
      */
     ChordType(String prettyName, String abbreviation) {
@@ -78,8 +78,8 @@ public enum ChordType {
      * Look up the enum based on pretty name ("Major") instead of regular value
      * ("MAJOR").
      *
-     * @param prettyName The pretty name of the chord type.
-     * @return A chord type if one is found for the given pretty name else null.
+     * @param prettyName The pretty name of the core type.
+     * @return A core type if one is found for the given pretty name else null.
      */
     public static ChordType valueOfPrettyName(String prettyName){
         return typeByPrettyName.get(prettyName);
@@ -91,7 +91,7 @@ public enum ChordType {
     
     /**
      * Get the pretty name. 
-     * @return A pretty name for the chord type
+     * @return A pretty name for the core type
      */
     public String getPrettyName() {
         return prettyName;

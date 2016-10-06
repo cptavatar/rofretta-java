@@ -1,7 +1,6 @@
 package net.alexrose.rofretta.parsing;
 
-import net.alexrose.rofretta.chord.*;
-import net.alexrose.rofretta.chord.old.ParameterException;
+import net.alexrose.rofretta.core.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,7 +31,7 @@ public class VoicingParser {
                     String[] pieces = line.get().split("\\s+");
 
                     if (pieces.length != 4) {
-                        throw new ParameterException("Should of had a finger, fret, root note,  and chord name section. Found length=" + pieces.length);
+                        throw new ParameterException("Should of had a finger, fret, root note,  and core name section. Found length=" + pieces.length);
                     }
 
                     int[] frets = parseInts(pieces[0], tuning.getNumStrings());

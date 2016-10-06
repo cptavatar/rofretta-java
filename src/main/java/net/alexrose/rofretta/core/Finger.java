@@ -3,14 +3,14 @@
  * and open the template in the editor.
  */
 
-package net.alexrose.rofretta.chord;
+package net.alexrose.rofretta.core;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Finger is an enumeration for the various fingers on the human hand that
- * can be specified for fingering any giving chord voicing.
+ * can be specified for fingering any giving core voicing.
  */
 public enum Finger {
 

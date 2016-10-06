@@ -1,4 +1,4 @@
-package net.alexrose.rofretta.chord;
+package net.alexrose.rofretta.core;
 
 import java.util.HashMap;
 import java.util.Map;

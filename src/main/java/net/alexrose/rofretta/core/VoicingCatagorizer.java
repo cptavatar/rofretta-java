@@ -1,4 +1,4 @@
-package net.alexrose.rofretta.chord;
+package net.alexrose.rofretta.core;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ public class VoicingCatagorizer {
 
     /**
      * Our algorithm we'll use for now (we can tweak later)
-     * - if we find an open string, its an open chord.
+     * - if we find an open string, its an open core.
      * - if it has no open strings, but it has muted strings, we'll call it a shape
-     * - if we hit all the strings and none are muted, we'll call it a bar chord
+     * - if we hit all the strings and none are muted, we'll call it a bar core
      *
      * @param strings
      * @return

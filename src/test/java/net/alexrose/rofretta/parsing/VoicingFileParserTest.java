@@ -1,8 +1,8 @@
 package net.alexrose.rofretta.parsing;
 
-import net.alexrose.rofretta.chord.ChordType;
-import net.alexrose.rofretta.chord.NoteName;
-import net.alexrose.rofretta.chord.Voicing;
+import net.alexrose.rofretta.core.ChordType;
+import net.alexrose.rofretta.core.NoteName;
+import net.alexrose.rofretta.core.Voicing;
 import org.junit.Test;
 
 import java.util.List;

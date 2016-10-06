@@ -1,13 +1,11 @@
-package net.alexrose.rofretta.chord;
-
-import net.alexrose.rofretta.chord.old.ParameterException;
+package net.alexrose.rofretta.core;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 /**
- * A voicing is the core of what we know about a chord played on a fretted instrument
+ * A voicing is the core of what we know about a core played on a fretted instrument
  * - what root, what frets are depressed, which fingers are used, etc.
  */
 public class Voicing {
