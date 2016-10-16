@@ -15,14 +15,8 @@ import java.util.List;
  */
 public class VoicingDetector {
 
-    /**
-     * Given
-     *
-     * @return
-     */
-    public List<Voicing> detect(List<InstrumentString> strings, Instrument tuning) {
+    private final DetectionAlgorithm engine = null;
 
-    }
 
     public List<Voicing> detect(String input) {
 
