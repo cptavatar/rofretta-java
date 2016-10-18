@@ -15,7 +15,7 @@ public class Instrument {
 
     public static final Instrument GUITAR_STANDARD = new Instrument(
             "Guitar, Standard Tuning",
-            Arrays.asList(new Integer[]{40, 45, 50, 55, 59, 64}),
+            Arrays.asList(40, 45, 50, 55, 59, 64),
             24);
 
     private final List<Integer> midiNoteNumbers;

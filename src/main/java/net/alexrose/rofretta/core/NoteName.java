@@ -11,23 +11,17 @@ import java.util.Map;
  */
 public enum NoteName {
 
-    A(0, "A"),
-    A_SHARP(1, "A\u266F"),
-    B_FLAT(1, "B\u266D"),
-    B(2, "B"),
-    C(3, "C"),
-    C_SHARP(4, "C\u266F"),
-    D_FLAT(4, "D\u266D"),
-    D(5, "D"),
-    D_SHARP(6, "D\u266F"),
-    E_FLAT(6, "E\u266D"),
-    E(7, "E"),
-    F(8, "F"),
-    F_SHARP(9, "F\u266F"),
-    G_FLAT(9, "G\u266D"),
-    G(10, "G"),
-    G_SHARP(11, "G\u266F"),
-    A_FLAT(11, "A\u266D");
+
+    DISABLED(-1, ""),
+
+    C(0, "C"),
+    D(2, "D"),
+    E(4, "E"),
+    F(5, "F"),
+    G(7, "G"),
+    A(9, "A"),
+    B(11, "B");
+
     
     private static Map<String,NoteName> notesByName = new HashMap();
     private static Map<Integer,NoteName> notesByOffset = new HashMap();
@@ -37,7 +31,7 @@ public enum NoteName {
             notesByName.put(note.getPrettyName(), note);
             
             //for values, default to sharps
-            if(! note.getPrettyName().contains("\u266D")){
+            if (!note.getPrettyName().contains("\u266D") || "".equals(note.getPrettyName())) {
                 notesByOffset.put(note.getOffset(), note);
             }
         }

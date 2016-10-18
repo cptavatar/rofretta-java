@@ -56,5 +56,7 @@ public class InstrumentString implements Serializable {
         return (fret == b.getFret()) && finger.equals(b.getFinger());
     }
 
-
+    public boolean isDisabled() {
+        return this.fret == DISABLED;
+    }
 }

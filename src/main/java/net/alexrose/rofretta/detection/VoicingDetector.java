@@ -1,8 +1,9 @@
 package net.alexrose.rofretta.detection;
 
 import net.alexrose.rofretta.core.Instrument;
-import net.alexrose.rofretta.core.InstrumentString;
+import net.alexrose.rofretta.core.UnidentifiedVoicing;
 import net.alexrose.rofretta.core.Voicing;
+import net.alexrose.rofretta.parsing.VoicingParser;
 
 import java.util.List;
 
@@ -15,10 +16,13 @@ import java.util.List;
  */
 public class VoicingDetector {
 
-    private final DetectionAlgorithm engine = null;
-
+    private DetectionAlgorithm algorithm = new ChordSizeDetector();
 
     public List<Voicing> detect(String input) {
+        return detect(new UnidentifiedVoicing(VoicingParser.parseStringsNoFrets(input, Instrument.GUITAR_STANDARD), Instrument.GUITAR_STANDARD));
+    }
 
+    public List<Voicing> detect(UnidentifiedVoicing voicing) {
+        return algorithm.detect(voicing);
     }
 }

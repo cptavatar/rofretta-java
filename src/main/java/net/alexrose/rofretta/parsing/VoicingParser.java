@@ -82,6 +82,11 @@ public class VoicingParser {
         return createParser(tuning).apply(trimAndFilterComments(line));
     }
 
+    public static List<InstrumentString> parseStringsNoFrets(String strings, Instrument tuning) {
+        return assemble(parseInts(strings, tuning.getNumStrings()), new int[tuning.getNumStrings()], tuning);
+    }
+
+
     public static int[] parseInts(String strings, int size) {
         int[] retval = new int[size];
         int index = 0;

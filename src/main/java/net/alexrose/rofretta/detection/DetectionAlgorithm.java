@@ -1,7 +1,6 @@
 package net.alexrose.rofretta.detection;
 
-import net.alexrose.rofretta.core.Instrument;
-import net.alexrose.rofretta.core.InstrumentString;
+import net.alexrose.rofretta.core.UnidentifiedVoicing;
 import net.alexrose.rofretta.core.Voicing;
 
 import java.util.List;
@@ -11,5 +10,5 @@ import java.util.List;
  */
 public interface DetectionAlgorithm {
 
-    List<Voicing> detect(List<InstrumentString> strings, Instrument tuning);
+    List<Voicing> detect(UnidentifiedVoicing voicing);
 }
