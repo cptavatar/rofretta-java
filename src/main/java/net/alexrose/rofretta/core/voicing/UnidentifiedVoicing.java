@@ -1,4 +1,9 @@
-package net.alexrose.rofretta.core;
+package net.alexrose.rofretta.core.voicing;
+
+import net.alexrose.rofretta.core.Finger;
+import net.alexrose.rofretta.core.Instrument;
+import net.alexrose.rofretta.core.InstrumentString;
+import net.alexrose.rofretta.core.ParameterException;
 
 import java.util.List;
 import java.util.Optional;

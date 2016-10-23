@@ -1,6 +1,5 @@
 package net.alexrose.rofretta.core;
 
-import java.io.Serializable;
 
 /**
  * InstrumentString represents the state of a string on an instrument: is the string 
@@ -8,7 +7,7 @@ import java.io.Serializable;
  * finger (if any) is being used to depress tht 
  *
  */
-public class InstrumentString implements Serializable {
+public class InstrumentString {
 
     private static final int DISABLED = -1;
     private final int fret;

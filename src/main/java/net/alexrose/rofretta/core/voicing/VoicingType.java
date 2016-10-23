@@ -1,4 +1,4 @@
-package net.alexrose.rofretta.core;
+package net.alexrose.rofretta.core.voicing;
 
 import java.util.HashMap;
 import java.util.Map;

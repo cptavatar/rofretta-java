@@ -1,6 +1,14 @@
 package net.alexrose.rofretta.parsing;
 
-import net.alexrose.rofretta.core.*;
+import net.alexrose.rofretta.core.ChordType;
+import net.alexrose.rofretta.core.Instrument;
+import net.alexrose.rofretta.core.InstrumentString;
+import net.alexrose.rofretta.core.ParameterException;
+import net.alexrose.rofretta.core.note.Note;
+import net.alexrose.rofretta.core.note.NoteFactory;
+import net.alexrose.rofretta.core.voicing.Voicing;
+import net.alexrose.rofretta.core.voicing.VoicingService;
+import net.alexrose.rofretta.core.voicing.VoicingType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,7 +24,6 @@ import java.util.function.Function;
  */
 public class VoicingParser {
     private static final Logger logger = LoggerFactory.getLogger(VoicingParser.class);
-    private static final VoicingCatagorizer catagorizer = new VoicingCatagorizer();
 
     /**
      * Curry the tuning to create a parsing function
@@ -38,9 +45,9 @@ public class VoicingParser {
                     int[] fingers = parseInts(pieces[1], tuning.getNumStrings());
 
                     List<InstrumentString> strings = assemble(frets, fingers, tuning);
-                    NoteName root = NoteName.valueOfPrettyName(pieces[2]);
+                    Note root = NoteFactory.note(pieces[2]);
                     ChordType chord = ChordType.valueOfAbbreviation(pieces[3]);
-                    VoicingType voicing = catagorizer.catagorize(strings);
+                    VoicingType voicing = VoicingService.catagorize(strings);
 
                     return Optional.of(new Voicing(root, chord, voicing, strings, tuning));
                 }

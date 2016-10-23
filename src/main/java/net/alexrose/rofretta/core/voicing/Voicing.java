@@ -1,4 +1,9 @@
-package net.alexrose.rofretta.core;
+package net.alexrose.rofretta.core.voicing;
+
+import net.alexrose.rofretta.core.ChordType;
+import net.alexrose.rofretta.core.Instrument;
+import net.alexrose.rofretta.core.InstrumentString;
+import net.alexrose.rofretta.core.note.Note;
 
 import java.util.List;
 
@@ -8,7 +13,7 @@ import java.util.List;
  */
 public class Voicing extends UnidentifiedVoicing {
     private final VoicingType type;
-    private final NoteName root;
+    private final Note root;
     private final ChordType chord;
 
     /**
@@ -20,7 +25,7 @@ public class Voicing extends UnidentifiedVoicing {
      * @param strings
      * @param tuning
      */
-    public Voicing(NoteName root, ChordType chord, VoicingType type, List<InstrumentString> strings, Instrument tuning) {
+    public Voicing(Note root, ChordType chord, VoicingType type, List<InstrumentString> strings, Instrument tuning) {
         super(strings, tuning);
         this.root = root;
         this.chord = chord;
@@ -31,7 +36,7 @@ public class Voicing extends UnidentifiedVoicing {
         return type;
     }
 
-    public NoteName getRoot() {
+    public Note getRoot() {
         return root;
     }
 
