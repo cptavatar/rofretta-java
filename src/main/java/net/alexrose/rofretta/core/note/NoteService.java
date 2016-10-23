@@ -2,7 +2,12 @@ package net.alexrose.rofretta.core.note;
 
 
 /**
- * Created by alex on 10/22/16.
+ * Where to put the "logic" for dealing with notes.
+ *
+ * Since this is stateless, static is fine.
+ *
+ * Little experiment with seperating "behavior" from "state" - not sure I like it so for, smells a bit like
+ * a util class.
  */
 public class NoteService {
     public static boolean isDisabled(Note note) {

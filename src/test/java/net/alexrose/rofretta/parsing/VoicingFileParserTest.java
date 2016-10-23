@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.util.List;
 
+import static net.alexrose.rofretta.core.AssertCore.assertNote;
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -21,6 +22,6 @@ public class VoicingFileParserTest {
         assertEquals(1, voicings.size());
         Voicing voicing = voicings.get(0);
         assertEquals(ChordType.MAJOR, voicing.getChordType());
-        assertEquals(NoteName.C, voicing.getRoot());
+        assertNote(voicing.getRoot(), NoteName.C, 0);
     }
 }

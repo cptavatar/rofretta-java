@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Created by alex on 10/11/16.
+ * Contract for what a chord detection algorithm must implement.
  */
 public interface DetectionAlgorithm {
 

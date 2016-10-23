@@ -15,6 +15,8 @@ public class NoteFactory {
     public static Note note(String note) {
         NoteName root = null;
         int modifier = 0;
+        //with a little more state I probably could support
+        //both "c" as "C" (because of b issues) - for now, must be caps.
         for (char c : note.trim().toCharArray()) {
             switch (c) {
                 case 'C':

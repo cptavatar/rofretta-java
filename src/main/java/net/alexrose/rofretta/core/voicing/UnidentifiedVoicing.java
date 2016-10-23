@@ -9,7 +9,11 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Created by alex on 10/17/16.
+ * UnidentifiedVoicing is the basic attributes of the voicing:
+ * - what the tuning is
+ * - what the strings are playing
+ *
+ * That we can then pass around before we identify it
  */
 public class UnidentifiedVoicing {
 

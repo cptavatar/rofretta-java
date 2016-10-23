@@ -8,12 +8,12 @@ import static net.alexrose.rofretta.core.Interval.*;
 /**
  * ChordType
  * This enumeration attempts to list the standard core types out there.
- * 
- * Ideas: eventually add a lists of intervals ie- Major {1,3,5}
- * 
+ *
  * Note: using a pretty name like we do here is not very localization friendly -
  * this probably should come from a property file.
- *  
+ *
+ *  WARNING - a few of the types near the end need work, are just cut-n-paste!
+ *
  * @author  Alex
  * @version
  */

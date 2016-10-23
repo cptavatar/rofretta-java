@@ -10,7 +10,8 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * Created by alex on 10/23/16.
+ * Again, an attempt to seperate "state" from "behavior", rolling up
+ * what I would have put in helper classes into a single "service" for now.
  */
 public class VoicingService {
 

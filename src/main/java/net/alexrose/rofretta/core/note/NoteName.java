@@ -5,10 +5,13 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
- * NoteName.java
- * <p>
- * This enumeration is used for note names for the 12
- * basic notes
+ * Enumeration for the basic note names (A-C) as well as a placeholder
+ * that can be used as a type-safe way to communicate a note is disabled
+ *
+ * We store 3 values
+ * - where the note is along a scale, for chromatic math
+ * - a string, so we can print out our name
+ * - where the note is in a list of just names, for diatonic math.
  */
 public enum NoteName {
 

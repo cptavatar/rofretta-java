@@ -10,6 +10,7 @@ import org.junit.Test;
 import java.util.List;
 import java.util.Optional;
 
+import static net.alexrose.rofretta.core.AssertCore.assertNote;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -21,13 +22,13 @@ public class VoicingParserTest {
 
     @Test
     public void parse() throws Exception {
-        Optional<Voicing> opt = VoicingParser.parse("032010 x32x1x c maj", Instrument.GUITAR_STANDARD);
+        Optional<Voicing> opt = VoicingParser.parse("032010 x32x1x C maj", Instrument.GUITAR_STANDARD);
 
         assertTrue(opt.isPresent());
         Voicing voicing = opt.get();
 
         assertEquals(ChordType.MAJOR, voicing.getChordType());
-        assertEquals(NoteName.C, voicing.getRoot());
+        assertNote(voicing.getRoot(), NoteName.C, 0);
 
         List<InstrumentString> strings = voicing.getStrings();
         assertEquals(0, strings.get(0).getFret());

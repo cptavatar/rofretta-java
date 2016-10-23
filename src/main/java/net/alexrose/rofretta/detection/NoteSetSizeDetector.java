@@ -29,6 +29,8 @@ public class NoteSetSizeDetector implements DetectionAlgorithm {
                 .filter((Note n) -> !NoteService.isDisabled(n))
                 .collect(Collectors.toSet());
 
+        //Our detection algorithm defaults to #s, equalize b/#s by using
+        //an absolute value of where the note sits from 0-11
         final Set<Integer> enharmonicSet = distinctNotes.stream()
                 .map((Note n) -> NoteService.enharmonicValue(n))
                 .collect(Collectors.toSet());
@@ -37,11 +39,14 @@ public class NoteSetSizeDetector implements DetectionAlgorithm {
 
         if (types.isPresent()) {
             List<Voicing> retval = new ArrayList<>();
+            //didn't see efficient/easy way to stream without uncessary object creation or
+            //or extra verbosity. nested loops it is.
             for (ChordType type : types.get()) {
                 for (Note root : distinctNotes) {
                     List<Note> notes = NoteFactory.notes(type, root);
                     if (enharmonicSet.equals(notes.stream().map((Note n) -> NoteService.enharmonicValue(n))
                             .collect(Collectors.toSet()))) {
+                        //should have factory method...
                         Voicing candidate = new Voicing(
                                 root, type, VoicingService.catagorize(voicing.getStrings()), voicing.getStrings(), voicing.getTuning()
                         );
